@@ -16,7 +16,7 @@ st.write(df.head(10))
 
 html_1 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
-<center><h3>The relationship between (sex) and (Sleep Disorder)</h3></center>
+<center><h3>Count plot for various categorical features</h3></center>
 </div>
 """
 st.markdown(html_1, unsafe_allow_html=True)
