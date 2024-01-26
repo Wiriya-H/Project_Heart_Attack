@@ -25,8 +25,8 @@ st.markdown("")
 
 html_2 = """
 <div style="background-color:#0E1117;padding:15px;">
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">บทคัดย่อภาษาไทย_________________________________________________________________________________________________</h6></left>
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">บทคัดย่อภาษาอังกฤษ_________________________________________________________________________________________________</h6></left>
+<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาไทย_________________________________________________________________________________________________</h6></left>
+<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาอังกฤษ_______________________________________________________________________________________________</h6></left>
 </div>
 """
 st.markdown(html_2, unsafe_allow_html=True)
