@@ -83,6 +83,39 @@ create_count_plot(ax2, df, 'exng', color_palette)
 ax2.set_xticks([0, 1])
 ax2.set_xticklabels(["No(0)","Yes(1)"])
 
+# Caa count
+ax3.text(1.5, 120, 'Caa', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax3, df, 'caa', color_palette)
+ax3.set_xticks([0, 1,2,3,4])
+
+
+# Cp count
+ax4.text(1.5, 120, 'Cp', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax4, df, 'cp', color_palette)
+ax4.set_xticks([1,2,3,4])
+ax4.set_xticklabels(["Typical angina(1)","Atypical angina(2)","nopain(3)","asymptomatic(4)"], rotation=15)
+
+# Fbs count
+ax5.text(0.5, 200, 'Fbs', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax5, df, 'fbs', color_palette)
+ax5.set_xticks([0, 1])
+ax5.set_xticklabels(["False(0)","True(1)"])
+
+# Restecg count
+ax6.text(0.75, 120, 'Restecg', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax6, df, 'restecg', color_palette)
+ax6.set_xticks([0, 1,2])
+ax6.set_xticklabels(["normal(0)","ST-T abnormality (1)","LV hypertrophy(2)"], rotation=15)
+
+# Slp count
+ax7.text(0.85, 120, 'Slp', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax7, df, 'slp', color_palette)
+ax7.set_xticks([0, 1,2])
+
+# Thall count
+ax8.text(1.2, 120, 'Thall', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+create_count_plot(ax8, df, 'thall', color_palette)
+ax8.set_xticks([0, 1, 2, 3])
 
 # Remove spines
 for s in ["top", "right", "left"]:
@@ -94,6 +127,7 @@ for s in ["top", "right", "left"]:
     ax6.spines[s].set_visible(False)
     ax7.spines[s].set_visible(False)
     ax8.spines[s].set_visible(False)
+
 
 st.pyplot(fig)
 
