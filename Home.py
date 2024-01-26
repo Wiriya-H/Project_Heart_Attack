@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.naive_bayes import GaussianNB
+import matplotlib.gridspec as gridspec
 
 
 html_1 = """
