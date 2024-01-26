@@ -7,7 +7,7 @@ with col1:
     st.write("") 
 
 with col2:
-    st.image("./pic/dataset-cover.jpg")
+    st.image("./pic/home.png")
 
 with col3:
     st.write("")
