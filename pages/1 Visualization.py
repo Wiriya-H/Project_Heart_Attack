@@ -1,3 +1,8 @@
+pip install seaborn
+
+
+
+
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -27,7 +32,7 @@ st.markdown(html_1, unsafe_allow_html=True)
 st.markdown("")
 
 fig = plt.figure(figsize=(18,15))
-gs = fig.add_gridspec(3,3)
+gs = fig.add_gridspec(3,3)  
 gs.update(wspace=0.5, hspace=0.25)
 ax0 = fig.add_subplot(gs[0,0])
 ax1 = fig.add_subplot(gs[0,1])
