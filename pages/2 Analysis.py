@@ -16,7 +16,7 @@ html_0 = """
 """
 st.markdown(html_0, unsafe_allow_html=True)
 st.markdown("")
-st.write(dt.head(10))
+st.write(df.head(10))
 
 html_1 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;margin-top:20px;">
