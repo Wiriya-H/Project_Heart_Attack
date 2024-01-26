@@ -23,15 +23,6 @@ html_1 = """
 st.markdown(html_1, unsafe_allow_html=True)
 st.markdown("")
 
-html_2 = """
-<div style="background-color:#0E1117;padding:15px;">
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาไทย.............................................................................</h6></left>
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาอังกฤษ...........................................................................</h6></left>
-</div>
-"""
-st.markdown(html_2, unsafe_allow_html=True)
-st.markdown("")
-
 ### Visualization ###
 
 df = pd.read_excel('./data/heart.xlsx')
