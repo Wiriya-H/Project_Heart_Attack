@@ -25,8 +25,8 @@ st.markdown("")
 
 html_2 = """
 <div style="background-color:#0E1117;padding:15px;">
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาไทย______________________________________________________________________________________</h6></left>
-<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาอังกฤษ____________________________________________________________________________________</h6></left>
+<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาไทย_____________________________________________________________________________</h6></left>
+<center></center><left><h6 style="text-indent: 30px;line-height: 1.5;">รอบทคัดย่อภาษาอังกฤษ___________________________________________________________________________</h6></left>
 </div>
 """
 st.markdown(html_2, unsafe_allow_html=True)
