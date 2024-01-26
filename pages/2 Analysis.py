@@ -27,8 +27,8 @@ st.markdown(html_1, unsafe_allow_html=True)
 st.markdown("")
 
 
-s1 = st.number_input("ระยะเวลาการนอนหลับ (ชั่วโมง)")
-s2 = st.slider("คุณภาพการนอนหลับ (มาตราส่วน: 1-10)",0,10)
+s1 = st.number_input("อายุของผู้ป่วย")
+s2 = st.slider("เพศของผู้ป่วย (ชาย : 1 , หญิง : 0)",0,1)
 s3 = st.number_input("ระดับการออกกําลังกาย (นาที / วัน)")
 s4 = st.slider("ระดับความเครียด (มาตราส่วน: 1-10)",0,10)
 
