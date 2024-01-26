@@ -36,34 +36,25 @@ The results of the analysis indicate that Decision Tree has the highest accuracy
 st.markdown(html_2, unsafe_allow_html=True)
 st.markdown("")
 
-html_3 = """
-<div style="background-color:#0E1117;border-top: 3px solid #ffffff;">
-<center><h4 style="text-indent: 50%;">  </h4></center>
-</div>
-"""
-st.markdown(html_3, unsafe_allow_html=True)
-st.markdown("")
-
-
 ### Visualization ###
 
 df = pd.read_excel('./data/heart.xlsx')
 
-html_4 = """
+html_3 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
 <center><h3>Example data table</h3></center>
 </div>
 """
-st.markdown(html_4, unsafe_allow_html=True)
+st.markdown(html_3, unsafe_allow_html=True)
 st.markdown("")
 st.write(df.head(10))
 
-html_5 = """
+html_4 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
 <center><h3>Count plot for various categorical features</h3></center>
 </div>
 """
-st.markdown(html_5, unsafe_allow_html=True)
+st.markdown(html_4, unsafe_allow_html=True)
 st.markdown("")
 
 fig = plt.figure(figsize=(18, 15))
@@ -175,12 +166,12 @@ for s in ["top", "right", "left"]:
 
 st.pyplot(fig)
 
-html_6 = """
+html_5 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
 <center><h3>Count of the target</h3></center>
 </div>
 """
-st.markdown(html_6, unsafe_allow_html=True)
+st.markdown(html_5, unsafe_allow_html=True)
 st.markdown("")
 
 
