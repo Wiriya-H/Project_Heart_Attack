@@ -17,7 +17,7 @@ with col3:
 
 html_1 = """
 <div style="background-color:#0E1117;margin-top:40px;padding:5px;border-radius:5px;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
-<center><h4 style ="filter: drop-shadow(0px 0px 5px #89c5fb);">ระบบวิเคราะห์สุขภาพการนอนหลับและไลฟ์สไตล์โดยใช้เทคนิคเหมืองข้อมูล</h4><h5  style ="filter: drop-shadow(0px 0px 5px #89c5fb);">The system analyzes health, sleep and lifestyle using data mining techniques</h5></center>
+<center><h4 style ="filter: drop-shadow(0px 0px 5px #89c5fb);">การวิเคราะห์และการทำนายภาวะหัวใจวายของผู้ป่วยที่อายุ 50 ปี ขึ้นไป</h4><h5  style ="filter: drop-shadow(0px 0px 5px #89c5fb);">The system analyzes health, sleep and lifestyle using data mining techniques</h5></center>
 </div>
 """
 st.markdown(html_1, unsafe_allow_html=True)
