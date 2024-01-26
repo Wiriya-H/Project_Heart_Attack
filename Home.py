@@ -205,6 +205,202 @@ for s in ["top", "left", "right"]:
     ax1.spines[s].set_visible(False)
 st.pyplot(fig)
 
+html_4_1 = """
+<div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<center><h3>Count plot for various categorical features</h3></center>
+</div>
+"""
+st.markdown(html_4_1, unsafe_allow_html=True)
+st.markdown("")
+
+
+fig = plt.figure(figsize=(18, 20))
+gs = fig.add_gridspec(6, 2)
+gs.update(wspace=0.5, hspace=0.5)
+ax0 = fig.add_subplot(gs[0, 0])
+ax1 = fig.add_subplot(gs[0, 1])
+ax2 = fig.add_subplot(gs[1, 0])
+ax3 = fig.add_subplot(gs[1, 1])
+ax4 = fig.add_subplot(gs[2, 0])
+ax5 = fig.add_subplot(gs[2, 1])
+ax6 = fig.add_subplot(gs[3, 0])
+ax7 = fig.add_subplot(gs[3, 1])
+ax8 = fig.add_subplot(gs[4, 0])
+ax9 = fig.add_subplot(gs[4, 1])
+ax10 = fig.add_subplot(gs[5, 0])
+ax11 = fig.add_subplot(gs[5, 1])
+
+background_color = "#ffe6e6"
+color_palette = ["#800000", "#8000ff", "#6aac90", "#5833ff", "#da8829"]
+fig.patch.set_facecolor(background_color)
+ax0.set_facecolor(background_color)
+ax1.set_facecolor(background_color)
+ax2.set_facecolor(background_color)
+ax3.set_facecolor(background_color)
+ax4.set_facecolor(background_color)
+ax5.set_facecolor(background_color)
+ax6.set_facecolor(background_color)
+ax7.set_facecolor(background_color)
+ax8.set_facecolor(background_color)
+ax9.set_facecolor(background_color)
+ax10.set_facecolor(background_color)
+ax11.set_facecolor(background_color)
+
+# Cp title
+ax0.text(0.5, 0.5, "Chest pain\ndistribution\n__________",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+ax0.spines["bottom"].set_visible(False)
+ax0.set_xticklabels([])
+ax0.set_yticklabels([])
+ax0.tick_params(left=False, bottom=False)
+ax0.text(1, .5, "0 - Typical Angina\n1 - Atypical Angina\n2 - Non-anginal Pain\n3 - Asymptomatic",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=14
+         )
+
+# Cp
+ax1.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax1.hist([df[df['output'] == 0]['cp'], df[df['output'] == 1]['cp']], bins=4, stacked=True, color=["#8000ff", "#da8829"], alpha=.5)
+ax1.set_xlabel("")
+ax1.set_ylabel("")
+
+# Caa title
+ax2.text(0.5, 0.5, "Number of\nmajor vessels\n___________",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+ax2.text(1, .5, "0 vessels\n1 vessel\n2 vessels\n3 vessels\n4vessels",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=14
+         )
+
+ax2.spines["bottom"].set_visible(False)
+ax2.set_xticklabels([])
+ax2.set_yticklabels([])
+ax2.tick_params(left=False, bottom=False)
+
+# Caa
+ax3.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax3.hist([df[df['output'] == 0]['caa'], df[df['output'] == 1]['caa']], bins=5, stacked=True, color=["#8000ff", "#da8829"], alpha=.5)
+ax3.set_xlabel("")
+ax3.set_ylabel("")
+
+# Sex title
+ax4.text(0.5, 0.5, "Heart Attack\naccording to\nsex\n______",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+ax4.text(1, .5, "0 - Female\n1 - Male",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=14
+         )
+ax4.spines["bottom"].set_visible(False)
+ax4.set_xticklabels([])
+ax4.set_yticklabels([])
+ax4.tick_params(left=False, bottom=False)
+
+# Sex
+ax5.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax5.bar([0, 1], df['sex'].value_counts().sort_index(), color=["#8000ff", "#da8829"], alpha=0.7)
+ax5.set_xticks([0, 1])
+ax5.set_xticklabels(["Female", "Male"])
+ax5.set_xlabel("")
+ax5.set_ylabel("")
+
+# Thall title
+ax6.text(0.5, 0.5, "Distribution of thall\naccording to\ntarget variable\n___________",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+ax6.text(1, .5, "Thalium Stress\nTest Result\n0, 1, 2, 3",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=14
+         )
+ax6.spines["bottom"].set_visible(False)
+ax6.set_xticklabels([])
+ax6.set_yticklabels([])
+ax6.tick_params(left=False, bottom=False)
+
+# Thall
+ax7.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax7.hist([df[df['output'] == 0]['thall'], df[df['output'] == 1]['thall']], bins=4, stacked=True, color=["#8000ff", "#da8829"], alpha=.5)
+ax7.set_xlabel("")
+ax7.set_ylabel("")
+
+# Thalachh title
+ax8.text(0.5, 0.5, "Boxen plot of\nthalachh wrt\noutcome\n_______",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+ax8.text(1, .5, "Maximum heart\nrate achieved",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=14
+         )
+
+ax8.spines["bottom"].set_visible(False)
+ax8.set_xticklabels([])
+ax8.set_yticklabels([])
+ax8.tick_params(left=False, bottom=False)
+
+# Thalachh
+ax9.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax9.boxplot([df[df['output'] == 0]['thalachh'], df[df['output'] == 1]['thalachh']], positions=[0, 1], labels=['No Heart Attack', 'Heart Attack'], notch=True, patch_artist=True, boxprops=dict(facecolor="#8000ff", edgecolor='black'), medianprops=dict(color='black'))
+ax9.set_xlabel("")
+ax9.set_ylabel("")
+
+# Exng title
+ax10.text(0.5, 0.5, "Strip Plot of\nexng vs age\n______",
+          horizontalalignment='center',
+          verticalalignment='center',
+          fontsize=18,
+          fontweight='bold',
+          fontfamily='serif',
+          color='#000000')
+ax10.text(1, .5, "Exercise induced\nangina\n0 - No\n1 - Yes",
+          horizontalalignment='center',
+          verticalalignment='center',
+          fontsize=14
+          )
+ax10.spines["bottom"].set_visible(False)
+ax10.set_xticklabels([])
+ax10.set_yticklabels([])
+ax10.tick_params(left=False, bottom=False)
+
+# Exng
+ax11.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax11.scatter(df[df['exng'] == 0]['age'], [0] * len(df[df['exng'] == 0]), color="#8000ff", alpha=0.7, label="No Heart Attack")
+ax11.scatter(df[df['exng'] == 1]['age'], [1] * len(df[df['exng'] == 1]), color="#da8829", alpha=0.7, label="Heart Attack")
+ax11.set_xlabel("Age")
+ax11.set_yticks([0, 1])
+ax11.set_yticklabels(["No Heart Attack", "Heart Attack"])
+ax11.legend()
+
+for ax in [ax0, ax1, ax2, ax3, ax4, ax5, ax6, ax7, ax8, ax9, ax10, ax11]:
+    for i in ["top", "left", "right"]:
+        ax.spines[i].set_visible(False)
+st.pyplot(fig)
 
 ### Analysis ###
 
