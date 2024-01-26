@@ -95,7 +95,7 @@ for s in ["top", "right", "left"]:
     ax7.spines[s].set_visible(False)
     ax8.spines[s].set_visible(False)
 
-st.plt.show()
+plt.show()
 
 html_2 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
