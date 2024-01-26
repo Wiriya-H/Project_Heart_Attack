@@ -236,7 +236,7 @@ s8 = st.number_input("อัตราการเต้นของหัวใ�
 s9 = st.slider("การออกกําลังกายทําให้เกิดโรคหลอดเลือดหัวใจตีบ (1 = ใช่ 0 = ไม่ใช่)",0,1)
 s10 = st.number_input("จุดสูงสุดก่อนหน้า")
 s11 = st.slider("Slope",0,2)
-s12 = st.slider("number of major vessels (0-3)",0,3)
+s12 = st.selectbox("Number of major vessels (0-3)", [0, 1, 2, 3])
 s13 = st.slider("Thal rate",0,3)
 
 if st.button("ทำนายผล"):
@@ -276,8 +276,7 @@ if st.button("ทำนายผล"):
       st.markdown(html_8, unsafe_allow_html=True)
       st.markdown("")
 
-   elif out[0]==1:
-          
+   elif out[0]==1: 
           
       html_9 = """
       <div style="background-color:#0E1117;padding:20px;border: 3px solid #ffffff;">
