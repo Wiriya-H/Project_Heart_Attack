@@ -141,8 +141,46 @@ st.markdown("")
 
 
 
-group_age = df.groupby(['Age', 'Sleep Disorder']).size().reset_index(name='count')
-st.bar_chart(group_age, x='Age', y='count', color='Sleep Disorder', height=400)
+fig = plt.figure(figsize=(18, 7))
+gs = fig.add_gridspec(1, 2)
+gs.update(wspace=0.3, hspace=0.15)
+ax0 = fig.add_subplot(gs[0, 0])
+ax1 = fig.add_subplot(gs[0, 1])
+
+background_color = "#ffe6e6"
+color_palette = ["#800000", "#8000ff", "#6aac90", "#5833ff", "#da8829"]
+fig.patch.set_facecolor(background_color)
+ax0.set_facecolor(background_color)
+ax1.set_facecolor(background_color)
+
+# Title of the plot
+ax0.text(0.5, 0.5, "Count of the target\n___________",
+         horizontalalignment='center',
+         verticalalignment='center',
+         fontsize=18,
+         fontweight='bold',
+         fontfamily='serif',
+         color='#000000')
+
+ax0.set_xticklabels([])
+ax0.set_yticklabels([])
+ax0.tick_params(left=False, bottom=False)
+
+# Target Count
+ax1.text(0.35, 130, "Output", fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+ax1.grid(color='#000000', linestyle=':', axis='y', zorder=0, dashes=(1, 5))
+ax1.bar(df['output'].value_counts().index, df['output'].value_counts().values, color=color_palette)
+ax1.set_xlabel("")
+ax1.set_ylabel("")
+ax1.set_xticks([0, 1])
+ax1.set_xticklabels(["Low chances of attack(0)", "High chances of attack(1)"])
+
+# Remove spines
+for s in ["top", "left", "right"]:
+    ax0.spines[s].set_visible(False)
+    ax1.spines[s].set_visible(False)
+st.pyplot(fig)
+
 
 html_3 = """
 <div style="background-color:#0E1117;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
