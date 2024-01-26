@@ -92,7 +92,7 @@ ax3.set_xticks([0, 1,2,3,4])
 # Cp count
 ax4.text(1.5, 120, 'Cp', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
 create_count_plot(ax4, df, 'cp', color_palette)
-ax4.set_xticks([1,2,3,4])
+ax4.set_xticks([0,1,2,3])
 ax4.set_xticklabels(["Typical angina(1)","Atypical angina(2)","nopain(3)","asymptomatic(4)"], rotation=45)
 
 # Fbs count
