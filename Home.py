@@ -3,6 +3,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+html_1 = """
+<div style="background-color:#0E1117;margin-top:40px;padding:5px;border-radius:5px;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<center><h4>การวิเคราะห์และการทำนายภาวะหัวใจวายของผู้ป่วยที่อายุ 50 ปี ขึ้นไป</h4><h5>Analysis and prediction of heart attack in patients aged 50 years and older.</h5></center>
+</div>
+"""
+st.markdown(html_1, unsafe_allow_html=True)
+st.markdown("")
+
 col1, col2, col3 = st.columns([1.5, 6, 1])
 
 with col1:
@@ -13,15 +21,6 @@ with col2:
 
 with col3:
     st.write("")
-
-
-html_1 = """
-<div style="background-color:#0E1117;margin-top:40px;padding:5px;border-radius:5px;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
-<center><h4>การวิเคราะห์และการทำนายภาวะหัวใจวายของผู้ป่วยที่อายุ 50 ปี ขึ้นไป</h4><h5>Analysis and prediction of heart attack in patients aged 50 years and older.</h5></center>
-</div>
-"""
-st.markdown(html_1, unsafe_allow_html=True)
-st.markdown("")
 
 ### Visualization ###
 
