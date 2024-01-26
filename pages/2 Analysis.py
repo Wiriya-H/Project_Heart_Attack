@@ -5,8 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-df=pd.read_csv('./data/Sleep_predic.csv')
-dt = pd.read_csv('./data/Sleep_health_and_lifestyle_dataset.csv')
+df = pd.read_excel('./data/heart.xlsx')
 
 
 
