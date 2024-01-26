@@ -34,8 +34,8 @@ s4 = st.slider("ระดับความเครียด (มาตรา�
 
 if st.button("ทำนายผล"):
 
-   X = df.drop('Sleep Disorder', axis=1)
-   y = df["Sleep Disorder"]  
+   X=df.drop(["output"],axis=1)
+   y=df["output"]
 
    tree_model = DecisionTreeClassifier()
    tree_model.fit(X, y)
