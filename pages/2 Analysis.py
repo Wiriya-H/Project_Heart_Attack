@@ -55,19 +55,8 @@ if st.button("ทำนายผล"):
    out = nb_model.predict(x_input)
 
    if out[0]== 0 :
-      col1, col2, col3 = st.columns([1.5, 6, 1])
           
-      with col1:
-         st.write("") 
-
-      with col2:
-         st.image("./pic/nm.png")
-
-      with col3:
-         st.write("")
-          
-          
-      html_4 = """
+      html_3 = """
       <div style="background-color:#0E1117;padding:20px;border: 3px solid #ffffff;">
       <center><h3 style="border-bottom: 3px solid #ffffff;">โอกาสหัวใจวายน้อย</h3></center>
       <left><h6 style="text-indent: 30px;line-height: 1.5;padding-top:15px;">สุขภาพการนอนเป็นส่วนสำคัญของสุขภาพทั่วๆ ไป และมีผลมากต่อความเป็นอยู่ของบุคคลในทุกวัย การนอนไม่เพียงแต่เติมพลังให้ร่างกายและสมอง แต่ยังมีผลต่อการทำงานของระบบฮอร์โมน การฟื้นตัวของร่างกาย และการนอนที่ดีเป็นสิ่งสำคัญที่มีผลดีต่อสุขภาพทั้งร่างกายและจิตใจ นี่คือบางแนวทางที่ช่วยให้คุณมีการนอนที่ดี</h6></left>
@@ -85,20 +74,10 @@ if st.button("ทำนายผล"):
       </ul>
       </div>
       """
-      st.markdown(html_4, unsafe_allow_html=True)
+      st.markdown(html_3, unsafe_allow_html=True)
       st.markdown("")
 
    elif out[0]==1:
-      col1, col2, col3 = st.columns([1.5, 6, 1])
-          
-      with col1:
-         st.write("") 
-
-      with col2:
-         st.image("./pic/sa.jpeg")
-
-      with col3:
-         st.write("")
           
           
       html_4 = """
