@@ -1,5 +1,5 @@
 import streamlit as st
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -46,13 +46,13 @@ if st.button("ทำนายผล"):
    X=df.drop(["output"],axis=1)
    y=df["output"]
 
-   tree_model = DecisionTreeClassifier()
-   tree_model.fit(X, y)
+   nb_model = GaussianNB()
+   nb_model.fit(X, y)
 
 
    x_input = np.array([[s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13]])
 
-   out = tree_model.predict(x_input)
+   out = nb_model.predict(x_input)
 
    if out[0]=="Normal":
       col1, col2, col3 = st.columns([1.5, 6, 1])
