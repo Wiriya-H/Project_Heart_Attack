@@ -7,7 +7,7 @@ import matplotlib.gridspec as gridspec
 
 
 html_1 = """
-<div style="background-color:#87A5E0;margin-top:40px;padding:5px;border-radius:5px;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<div style="background-color:#87A5E0;margin-top:40px;padding:5px;border-radius:5px;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;">
 <center><h4>การวิเคราะห์และการทำนายภาวะหัวใจวายของผู้ป่วยที่อายุ 50 ปี ขึ้นไป</h4><h5>Analysis and prediction of heart attack in patients aged 50 years and older.</h5></center>
 </div>
 """
@@ -30,7 +30,7 @@ with col3:
 df = pd.read_excel('./data/heart.xlsx')
 
 html_3 = """
-<div style="background-color:#87A5E0;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<div style="background-color:#87A5E0;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;">
 <center><h3>Example data table</h3></center>
 </div>
 """
@@ -39,7 +39,7 @@ st.markdown("")
 st.write(df.head(10))
 
 html_4 = """
-<div style="background-color:#87A5E0;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<div style="background-color:#87A5E0;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;">
 <center><h3>Count plot for various categorical features</h3></center>
 </div>
 """
@@ -156,7 +156,7 @@ for s in ["top", "right", "left"]:
 st.pyplot(fig)
 
 html_5 = """
-<div style="background-color:#87A5E0;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<div style="background-color:#87A5E0;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;">
 <center><h3>Count of the target</h3></center>
 </div>
 """
@@ -209,7 +209,7 @@ st.pyplot(fig)
 ### Analysis ###
 
 html_6 = """
-<div style="background-color:#87A5E0;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;">
+<div style="background-color:#87A5E0;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;">
 <center><h3>Example data table</h3></center>
 </div>
 """
@@ -218,7 +218,7 @@ st.markdown("")
 st.write(df.head(10))
 
 html_7 = """
-<div style="background-color:#87A5E0;border-bottom: 3px solid #ffffff;border-top: 3px solid #ffffff;margin-top:20px;">
+<div style="background-color:#87A5E0;border-bottom: 3px solid #31333F;border-top: 3px solid #31333F;margin-top:20px;">
 <center><h3>Class Prediction</h3></center>
 </div>
 """
@@ -256,8 +256,8 @@ if st.button("ทำนายผล"):
    if out[0]== 0 :
           
       html_8 = """
-      <div style="background-color:#87A5E0;padding:20px;border: 3px solid #ffffff;">
-      <center><h3 style="border-bottom: 3px solid #ffffff;">โอกาสหัวใจวายน้อย</h3></center>
+      <div style="background-color:#87A5E0;padding:20px;border: 3px solid #31333F;">
+      <center><h3 style="border-bottom: 3px solid #31333F;">โอกาสหัวใจวายน้อย</h3></center>
       <left><h6 style="text-indent: 30px;line-height: 1.5;padding-top:15px;">โรคหัวใจวาย (Coronary Artery Disease, CAD) เป็นภาวะที่เกิดจากการสะสมของเส้นเลือดในหัวใจ (หลอดเลือดในหัวใจ) ทำให้การไหลของเลือดที่จำเป็นสำหรับการให้สารอาหารและออกซิเจนให้กับกล้ามเนื้อหัวใจลดลง สาเหตุหลักของโรคหัวใจวายคือการสะสมของตะกอนไขมันและแร่ธาตุในเส้นเลือดในหัวใจ (เช่น เนื้อเยื่อไขมัน, เซลล์เลือดขาว, และแคลเซียม) ซึ่งทำให้เกิดลิ่ม (plaque) ในเส้นเลือด ลิ่มนี้จะทำให้เส้นเลือดตีบ และสามารถทำให้เกิดอาการหัวใจวาย นี่คือบางวิธีที่อาจช่วยลดโอกาสหัวใจวาย</h6></left>
       <ul>
          <li>รับประทานอาหารที่สุขภาพดี:การบริโภคอาหารที่รวมถึงผัก, ผลไม้, และอาหารที่มีไขมันไม่เบาหรือไขมันดีสามารถช่วยลดความเสี่ยง</li>
@@ -280,8 +280,8 @@ if st.button("ทำนายผล"):
    elif out[0]==1: 
           
       html_9 = """
-      <div style="background-color:#87A5E0;padding:20px;border: 3px solid #ffffff;">
-      <center><h3 style="border-bottom: 3px solid #ffffff;">โอกาสหัวใจวายมาก</h3></center>
+      <div style="background-color:#87A5E0;padding:20px;border: 3px solid #31333F;">
+      <center><h3 style="border-bottom: 3px solid #31333F;">โอกาสหัวใจวายมาก</h3></center>
       <left><h6 style="text-indent: 30px;line-height: 1.5;padding-top:15px;">โรคหัวใจวาย (Coronary Artery Disease, CAD) เป็นภาวะที่เกิดจากการสะสมของเส้นเลือดในหัวใจ (หลอดเลือดในหัวใจ) ทำให้การไหลของเลือดที่จำเป็นสำหรับการให้สารอาหารและออกซิเจนให้กับกล้ามเนื้อหัวใจลดลง สาเหตุหลักของโรคหัวใจวายคือการสะสมของตะกอนไขมันและแร่ธาตุในเส้นเลือดในหัวใจ (เช่น เนื้อเยื่อไขมัน, เซลล์เลือดขาว, และแคลเซียม) ซึ่งทำให้เกิดลิ่ม (plaque) ในเส้นเลือด ลิ่มนี้จะทำให้เส้นเลือดตีบ และสามารถทำให้เกิดอาการหัวใจวาย นี่คือบางวิธีที่อาจช่วยลดโอกาสหัวใจวาย</h6></left>
       <ul>
          <li>รับประทานอาหารที่สุขภาพดี:การบริโภคอาหารที่รวมถึงผัก, ผลไม้, และอาหารที่มีไขมันไม่เบาหรือไขมันดีสามารถช่วยลดความเสี่ยง</li>
