@@ -229,7 +229,7 @@ st.markdown("""
     <style>
         /* Adjust the font size as needed */
         .css-1i0g0hu {
-            font-size: 18px; /* Example font size */
+            font-size: 32px; /* Example font size */
         }
     </style>
 """, unsafe_allow_html=True)
