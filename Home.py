@@ -225,18 +225,10 @@ html_7 = """
 st.markdown(html_7, unsafe_allow_html=True)
 st.markdown("")
 
-st.markdown("""
-    <style>
-        /* Adjust the font size as needed */
-        .css-1i0g0hu {
-            font-size: 32px; /* Example font size */
-        }
-    </style>
-""", unsafe_allow_html=True)
 
-s1 = st.number_input("# Age : อายุของผู้ป่วย")
-s2 = st.selectbox("# Sex : เพศของผู้ป่วย (0 : หญิง | 1 : ชาย)",[0,1])
-s3 = st.selectbox("# Cp : อาการเจ็บหน้าอก\n(0 : โรคหลอดเลือดหัวใจตีบทั่วไป | 1 : โรคหลอดเลือดหัวใจตีบผิดปรกติ | 2 : อาการปวดที่ไม่ใช่โรคหลอดเลือดหัวใจตีบ | 3 : ไม่มีอาการ)",[0,1,2,3])
+s1 = st.number_input("Age : อายุของผู้ป่วย")
+s2 = st.selectbox("Sex : เพศของผู้ป่วย (0 : หญิง | 1 : ชาย)",[0,1])
+s3 = st.selectbox("Cp : อาการเจ็บหน้าอก\n(0 : โรคหลอดเลือดหัวใจตีบทั่วไป | 1 : โรคหลอดเลือดหัวใจตีบผิดปรกติ | 2 : อาการปวดที่ไม่ใช่โรคหลอดเลือดหัวใจตีบ | 3 : ไม่มีอาการ)",[0,1,2,3])
 s4 = st.number_input("# Trtbps : ความดันโลหิตขณะพัก (มม. ปรอท)")
 s5 = st.number_input("Chol : cholestoral ใน mg/dl ดึงผ่านเซ็นเซอร์ BMI")
 s6 = st.selectbox("Fbs : น้ําตาลในเลือดขณะอดอาหาร > 120 มก./ดล. (1 = จริง 0 = เท็จ)",[0,1])
