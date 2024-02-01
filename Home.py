@@ -225,6 +225,14 @@ html_7 = """
 st.markdown(html_7, unsafe_allow_html=True)
 st.markdown("")
 
+st.markdown("""
+    <style>
+        /* Adjust the font size as needed */
+        .css-1i0g0hu {
+            font-size: 18px; /* Example font size */
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 s1 = st.number_input("# Age : อายุของผู้ป่วย")
 s2 = st.selectbox("# Sex : เพศของผู้ป่วย (0 : หญิง | 1 : ชาย)",[0,1])
