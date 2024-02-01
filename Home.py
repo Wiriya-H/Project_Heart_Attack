@@ -226,19 +226,24 @@ st.markdown(html_7, unsafe_allow_html=True)
 st.markdown("")
 
 
+# Your existing code
 s1 = st.number_input("Age : อายุของผู้ป่วย")
-s2 = st.selectbox("Sex : เพศของผู้ป่วย (0 : หญิง | 1 : ชาย)",[0,1])
-s3 = st.selectbox("Cp : อาการเจ็บหน้าอก\n(0 : โรคหลอดเลือดหัวใจตีบทั่วไป | 1 : โรคหลอดเลือดหัวใจตีบผิดปรกติ | 2 : อาการปวดที่ไม่ใช่โรคหลอดเลือดหัวใจตีบ | 3 : ไม่มีอาการ)",[0,1,2,3])
+s2 = st.selectbox("Sex : เพศของผู้ป่วย (0 : หญิง | 1 : ชาย)", [0, 1])
+s3 = st.selectbox("Cp : อาการเจ็บหน้าอก\n(0 : โรคหลอดเลือดหัวใจตีบทั่วไป | 1 : โรคหลอดเลือดหัวใจตีบผิดปรกติ | 2 : อาการปวดที่ไม่ใช่โรคหลอดเลือดหัวใจตีบ | 3 : ไม่มีอาการ)", [0, 1, 2, 3])
 s4 = st.number_input("# Trtbps : ความดันโลหิตขณะพัก (มม. ปรอท)")
 s5 = st.number_input("Chol : cholestoral ใน mg/dl ดึงผ่านเซ็นเซอร์ BMI")
-s6 = st.selectbox("Fbs : น้ําตาลในเลือดขณะอดอาหาร > 120 มก./ดล. (1 = จริง 0 = เท็จ)",[0,1])
-s7 = st.selectbox("Restecg : พักผลการตรวจคลื่นไฟฟ้าหัวใจ ( 0 : ปกติ | 1 : มีความผิดปกติของคลื่น ST-T | 2 : แสดงกระเป๋าหน้าท้องยั่วยวนซ้ายที่เป็นไปได้หรือแน่นอนตามเกณฑ์ของเอสเตส)",[0,1,2])
+s6 = st.selectbox("Fbs : น้ําตาลในเลือดขณะอดอาหาร > 120 มก./ดล. (1 = จริง 0 = เท็จ)", [0, 1])
+s7 = st.selectbox("Restecg : พักผลการตรวจคลื่นไฟฟ้าหัวใจ ( 0 : ปกติ | 1 : มีความผิดปกติของคลื่น ST-T | 2 : แสดงกระเป๋าหน้าท้องยั่วยวนซ้ายที่เป็นไปได้หรือแน่นอนตามเกณฑ์ของเอสเตส)", [0, 1, 2])
 s8 = st.number_input("Thalachh : อัตราการเต้นของหัวใจสูงสุดทําได้")
-s9 = st.selectbox("Exng : การออกกําลังกายทําให้เกิดโรคหลอดเลือดหัวใจตีบ (1 = ใช่ 0 = ไม่ใช่)",[0,1])
+s9 = st.selectbox("Exng : การออกกําลังกายทําให้เกิดโรคหลอดเลือดหัวใจตีบ (1 = ใช่ 0 = ไม่ใช่)", [0, 1])
 s10 = st.number_input("Oldpeak : จุดสูงสุดก่อนหน้า")
-s11 = st.selectbox("Slp : Slope",[0,1,2])
+s11 = st.selectbox("Slp : Slope", [0, 1, 2])
 s12 = st.selectbox("Caa : Number of major vessels (0-3)", [0, 1, 2, 3])
-s13 = st.selectbox("Thall : Thal rate",[0, 1, 2, 3])
+s13 = st.selectbox("Thall : Thal rate", [0, 1, 2, 3])
+
+# Adjusting font size and making it bold
+st.markdown("<style>h1{font-size: 18px !important;}</style>", unsafe_allow_html=True)
+st.markdown("<style>label{font-size: 16px !important; font-weight: bold;}</style>", unsafe_allow_html=True)
 
 if st.button("ทำนายผล"):
 
