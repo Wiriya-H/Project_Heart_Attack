@@ -241,12 +241,24 @@ s11 = st.selectbox("# Slp : Slope", [0, 1, 2])
 s12 = st.selectbox("# Caa : Number of major vessels (0-3)", [0, 1, 2, 3])
 s13 = st.selectbox("# Thall : Thal rate", [0, 1, 2, 3])
 
+
+
+
+col1, col2, col3 = st.columns([1, 6, 1])
+
+with col1:
+    st.write("") 
+
+with col2:
+    
+
+
 # Adjusting font size and making it bold
 st.markdown("<style>h1{font-size: 18px !important;}</style>", unsafe_allow_html=True)
 st.markdown("<style>label{font-size: 16px !important; font-weight: bold;}</style>", unsafe_allow_html=True)
 
 if st.button("ทำนายผล"):
-
+    
    X=df.drop(["output"],axis=1)
    y=df["output"]
 
@@ -305,3 +317,7 @@ if st.button("ทำนายผล"):
       """
       st.markdown(html_9, unsafe_allow_html=True)
       st.markdown("")
+
+with col3:
+    st.write("")
+
